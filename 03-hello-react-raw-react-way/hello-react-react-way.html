@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import React from "https://esm.sh/react@19/?dev";
+      import ReactDOMClient from "https://esm.sh/react-dom@19/client?dev";
+
+      const { createElement } = React;
+      const { createRoot } = ReactDOMClient;
+
+      const root = document.getElementById("root");
+      const element = createElement("div", null, "Hello React!!");
+      const reactRoot = createRoot(root);
+
+      reactRoot.render(element);
+    </script>
+
+    <script type="module">
+      import React from "https://esm.sh/react@19/?dev";
+      import ReactDOMClient from "https://esm.sh/react-dom@19/client?dev";
+    </script>
+  </body>
+</html>
