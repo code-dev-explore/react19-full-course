@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <!-- <div id="root"></div> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-type="module">
+      import React from "https://esm.sh/react@19/?dev";
+      import ReactDOMClient from "https://esm.sh/react-dom@19/client?dev";
+
+      const { createRoot } = ReactDOMClient;
+      const vdom = (
+        <div id="root">
+          <div>
+            <h1>Hello React!!!</h1>
+          </div>
+        </div>
+      );
+      const rdom = document.createElement("div");
+      const reactRoot = createRoot(document.body);
+      reactRoot.render(vdom);
+      console.log(vdom);
+      console.log(typeof vdom);
+      console.log(vdom instanceof Object);
+      console.log(rdom);
+      debugger;
+    </script>
+  </body>
+</html>
