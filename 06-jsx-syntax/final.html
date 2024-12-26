@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <style>
+      .title {
+        background-color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="root"></div> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-type="module">
+      import React from "https://esm.sh/react@19/?dev";
+      import ReactDOMClient from "https://esm.sh/react-dom@19/client?dev";
+
+      const { createRoot } = ReactDOMClient;
+
+      const myId = "root";
+      const myData = "Hello React!!!";
+
+      const element = (
+        <>
+          <div id={myId}>
+            <div>
+              <h1 className="title">
+                <span style={{ color: "white", fontSize: "40px" }}>
+                  {myData}
+                </span>
+              </h1>
+            </div>
+          </div>
+          <input type="text" />
+          <Codex>Please thumbs up and subscribe.</Codex>
+        </>
+      );
+      const reactRoot = createRoot(document.body);
+      reactRoot.render(element);
+    </script>
+  </body>
+</html>
