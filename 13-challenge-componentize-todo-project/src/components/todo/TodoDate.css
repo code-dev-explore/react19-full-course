@@ -1,0 +1,19 @@
+.date {
+  background-color: #eafdc6;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 0.4rem;
+}
+
+.day {
+  font-size: 3rem;
+}
+
+.month {
+  font-size: 1.6rem;
+}
